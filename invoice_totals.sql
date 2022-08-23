@@ -3,3 +3,12 @@
 -- Customer Name
 -- Customer Country
 -- Sale Agent full name
+
+SELECT
+    I.Total,
+    C.FirstName||' '||C.LastName CustomerFullName,
+    C.Country,
+    E.FirstName||' '||C.LastName EmployeeFullName
+From Employee E
+JOIN Customer C ON e.EmployeeId = C.SupportRepId
+JOIN Invoice I ON I.CustomerId = C.CustomerId
